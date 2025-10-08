@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  Simple Calculator - Jaseci Project
 
 A simple calculator built using **Jaseci**, designed for beginners to explore Jaseci’s core features like **actions**, **walks**, and **nodes**. This project demonstrates how to create interactive logic using Jac programs combined with Python actions.
@@ -11,83 +12,113 @@ The project allows users to perform basic arithmetic operations (addition, subtr
 ---
 
 ## Project Structure
+# Simple Calculator - Jaseci Project
 
-simple-calculator/
-├── actions/
-│ └── init.py # Python actions used by Jac
-├── problems/
-│ └── calculator.jac # Jac program defining calculator logic
-├── main.jac # Entry point Jac program
-├── venv/ # Python virtual environment
-└── README.md # Project documentation
-
-yaml
-Copy code
+A simple calculator built using **Jaseci**, designed for beginners to explore Jaseci’s core features like **actions**, **walks**, and **nodes**. This project demonstrates how to create interactive logic using Jac programs combined with Python actions.
 
 ---
 
-## Prerequisites
+## Project Overview
 
-Before running the project, ensure you have:
+The project allows users to perform basic arithmetic operations (addition, subtraction, multiplication, division) through a simple command-line interface. It’s a perfect starting point for learning Jaseci programming.
 
-- Python 3.12 installed
+---
+
+## Project Structure (remote example)
+
+This repository previously contained a larger example layout. The key elements of that remote README are preserved below; local assignment files are described in their own section after this.
+
+simple-calculator/ (example layout)
+- actions/
+- problems/
+- main.jac
+- README.md
+
+## Prerequisites (remote example)
+
+- Python 3.12
 - Virtual environment (`venv`)
-- Jaseci 1.4.2.6 installed
-- Required Python packages for actions (e.g., FastAPI, if used)
-- `distutils` installed for building packages
+- Jaseci (example listed v1.4.2.6)
+
+## Installation & Setup (remote example)
+
+Follow the remote README instructions if you're using the larger example: create and activate a virtualenv, install Jaseci and any action dependencies.
 
 ---
 
-## Installation & Setup
+# Local assignment files (this fork)
 
-1. **Clone the repository**:
+This fork contains a minimal, runnable Jac assignment suitable for submission. Files in this folder are:
+
+- `calculator.jac` — Jac source file with basic arithmetic functions and example usage.
+- `runner.py` — Python helper that calls the `jac` CLI to run the Jac program or evaluate a single operation.
+- `requirements.txt` — Python dependencies (installs the Jac runtime/CLI via pip).
+- `tests/test_calculator.py` — Simple pytest that exercises the runner (requires `jac` to be installed in the env).
+- `.gitignore` — ignores virtualenv files and temp outputs.
+
+## How to run (local)
+
+1. Create a virtual environment and install dependencies:
 
 ```bash
-git clone <your-repo-url>
-cd simple-calculator
-Create and activate a virtual environment:
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -U pip
+python -m pip install -r requirements.txt
+```
 
-bash
-Copy code
-python3 -m venv venv
-source venv/bin/activate
-Upgrade pip, setuptools, and wheel:
+2. Run the Jac example (prints a few sample calculations):
 
-bash
-Copy code
-pip install --upgrade pip setuptools wheel
-Install Jaseci and dependencies:
+```bash
+jac run calculator.jac
+```
 
-bash
-Copy code
-pip install jaseci==1.4.2.6
-pip install fastapi
-# Install any other packages your actions use
-How to Run the Calculator
-Run the main Jac program:
+3. Or use the Python runner to evaluate a single operation (uses the `jac` CLI under the hood):
 
-bash
-Copy code
-jac run main.jac
-Follow the on-screen prompts to input numbers and operations. The calculator will return the result for your operation.
+```bash
+python runner.py add 2 3
+python runner.py div 8 2
+```
 
-How It Works
-This project uses Jaseci, a framework for building autonomous agents, which relies on three main concepts:
+4. Run tests (requires `jac` available in the environment):
 
-Actions (actions/__init__.py)
-Python functions that define tasks your Jac program can perform. For example, adding two numbers or calculating a result.
+```bash
+pytest -q
+```
 
-Walks (main.jac)
-Sequences of steps that guide your agents through tasks. In this project, the walk guides the calculator flow from input to output.
+## Notes
+- This project relies on the `jac` CLI provided by the `jaclang` package. If you can't install packages on your system, the `calculator.jac` file is a standalone Jac program that can be submitted along with this README.
 
-Jac Programs (calculator.jac)
-Jac is a high-level language used to define the logic of your agents. Here, it handles arithmetic operations and user input/output.
+How to run
 
-Tips for Beginners
-Keep Python actions simple at first, only implement the arithmetic operations.
+1. Create a virtual environment and install dependencies:
 
-Test each part individually: first actions, then Jac logic.
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -U pip
+python -m pip install -r requirements.txt
+```
 
-Make sure your virtual environment is activated before running Jac programs.
+2. Run the Jac example (prints a few sample calculations):
 
-Use clear variable names to track numbers and operations in the Jac program.
+```bash
+jac run calculator.jac
+```
+
+3. Or use the Python runner to evaluate a single operation (uses the `jac` CLI under the hood):
+
+```bash
+python runner.py add 2 3
+python runner.py div 8 2
+```
+
+4. Run tests (requires `jac` available in the environment):
+
+```bash
+pytest -q
+```
+
+Notes
+- This project relies on the `jac` CLI provided by the `jaclang` package. If you can't install packages on your system, the `calculator.jac` file is a standalone Jac program that can be submitted along with this README.
+>>>>>>> 2f807af (Add Jaseci/Jac simple calculator project)
