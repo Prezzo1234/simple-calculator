@@ -28,7 +28,8 @@ with entry {
     print(f"6 * 7 = {mul(6,7)}");
     print(f"8 / 2 = {div(8,2)}");
 
-    # Show error handling (explicit check to avoid runtime exception)
+    # Show error handling (explicit check to avoid r
+    untime exception)
     if (0 == 0) {
         # demonstrate safe check before dividing
         if (0 != 0) {
